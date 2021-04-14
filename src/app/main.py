@@ -1,3 +1,7 @@
+#
+#
+#
+
 def mainFunc():
     global power, nowPower, pwm17, koef_brightnes
     if nowPower < power-koef_brightnes or nowPower > power+koef_brightnes:
