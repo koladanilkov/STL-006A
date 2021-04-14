@@ -14,7 +14,6 @@ uid = machine.unique_id()
 
 wifiSSID = 'VECTRO'
 wifiPASS = 'minivolkmcollaigul'
-print('VERSION 006')
 station = network.WLAN(network.STA_IF)
 station.active(True)
 station.connect(wifiSSID, wifiPASS)
@@ -24,7 +23,7 @@ while not station.isconnected():
 
 print('Connection successful')
 print(station.ifconfig())
-
+print('LIPTON')
 
 mqtt_server = '109.248.175.143'
 client_id = ubinascii.hexlify(machine.unique_id())
