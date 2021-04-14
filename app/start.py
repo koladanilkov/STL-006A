@@ -14,7 +14,7 @@ uid = machine.unique_id()
 
 wifiSSID = 'VECTRO'
 wifiPASS = 'minivolkmcollaigul'
-
+print('VERSION 006')
 station = network.WLAN(network.STA_IF)
 station.active(True)
 station.connect(wifiSSID, wifiPASS)
@@ -23,7 +23,6 @@ while not station.isconnected():
     pass
 
 print('Connection successful')
-print('BINGO')
 print(station.ifconfig())
 
 
