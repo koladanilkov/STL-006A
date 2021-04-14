@@ -1,5 +1,5 @@
 import time
-from mymqtt import MQTTClient
+from app.mymqtt import MQTTClient
 import ubinascii
 import machine
 import micropython
@@ -11,7 +11,6 @@ gc.collect()
 import utime
 uid = machine.unique_id()
 
-####
 
 wifiSSID = 'VECTRO'
 wifiPASS = 'minivolkmcollaigul'
@@ -24,6 +23,7 @@ while not station.isconnected():
     pass
 
 print('Connection successful')
+print('BINGO')
 print(station.ifconfig())
 
 
@@ -43,7 +43,7 @@ power = 100
 nowPower = 100
 
 
-p13 = Pin(13, Pin.OUT)    # create output pin on GPIO0
+p13 = Pin(13, Pin.OUT)   
 p13.off()                
 
 
@@ -61,7 +61,8 @@ def mainFunc():
             pwm17.duty(nowPower*10)
         print('%s \n' % (nowPower))       
 
-#Функция для обработки полученного сообщения
+
+
 def sub_cb(topic, msg):
   print((topic, msg))
   global topic_sub_power, topic_sub_scan, topic_pub_scan, topic_pub_status, power, koef_brightnes, topic_sub_koef_brightness

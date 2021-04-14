@@ -200,6 +200,7 @@ class OTAUpdater:
                 self._copy_file(fromPath + '/' + entry[0], toPath + '/' + entry[0])
 
     def _copy_file(self, fromPath, toPath):
+    	print('Coping from %s to %s' % (fromPath, toPath))
         with open(fromPath) as fromFile:
             with open(toPath, 'w') as toFile:
                 CHUNK_SIZE = 512 # bytes

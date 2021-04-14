@@ -13,7 +13,7 @@ def connectToWifiAndUpdate():
         while not sta_if.isconnected():
             pass
     print('network config:', sta_if.ifconfig())
-    otaUpdater = OTAUpdater('https://github.com/koladanilkov/STL-006A', main_dir='app', secrets_file="secrets.py")
+    otaUpdater = OTAUpdater(secrets.PROJECT_REPO, main_dir=secrets.MAIN_DIR, secrets_file="secrets.py")
     hasUpdated = otaUpdater.install_update_if_available()
     if hasUpdated:
         machine.reset()
