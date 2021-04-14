@@ -1,3 +1,4 @@
-.idea
+*.idea
 z
 venv
+secrets.py
