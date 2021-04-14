@@ -11,6 +11,7 @@ gc.collect()
 import utime
 uid = machine.unique_id()
 
+####
 
 wifiSSID = 'VECTRO'
 wifiPASS = 'minivolkmcollaigul'
